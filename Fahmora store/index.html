@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahmora Store | Luxury Watches & Accessories</title>
+<style>
+  body{margin:0;font-family:'Poppins',sans-serif;background:#000;color:#fff;}
+  a{text-decoration:none;color:#ff2e2e;}
+  h1,h2,h3{color:#ff2e2e;margin:0;}
+  header{display:flex;justify-content:space-between;align-items:center;padding:15px 40px;
+          background:#0a0a0a;border-bottom:2px solid #ff2e2e;position:sticky;top:0;z-index:99;}
+  .logo{display:flex;align-items:center;}
+  .logo img{width:55px;margin-right:10px;}
+  nav a{margin:0 15px;font-weight:500;}
+  nav a:hover{color:#fff;}
+  section{padding:70px 20px;text-align:center;}
+  .hero{background:linear-gradient(180deg,#000,#330000);}
+  .hero h2{font-size:2.5em;}
+  .hero button{margin-top:20px;padding:10px 25px;background:#ff2e2e;color:#000;border:none;
+               border-radius:5px;cursor:pointer;font-weight:bold;}
+  .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:40px;}
+  .card{width:250px;background:#111;border:1px solid #ff2e2e;border-radius:8px;padding:15px;}
+  .card img{width:100%;height:180px;object-fit:cover;border-radius:8px;}
+  .card h3{margin:10px 0;}
+  .page{display:none;}
+  .active{display:block;}
+  button.back{background:#ff2e2e;color:#000;padding:8px 20px;margin-top:20px;border:none;
+              border-radius:5px;cursor:pointer;}
+  form{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:20px;}
+  input,textarea{width:300px;padding:10px;background:#111;border:1px solid #ff2e2e;
+                 color:#fff;border-radius:5px;}
+  footer{background:#0a0a0a;text-align:center;padding:15px;border-top:2px solid #ff2e2e;
+         color:#ff2e2e;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="logo.png" alt="logo"><h1>Fahmora Store</h1></div>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('shop')">Shop</a>
+    <a href="#" onclick="showPage('men')">Men</a>
+    <a href="#" onclick="showPage('women')">Women</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active hero">
+  <h2>Timeless Luxury for Every Moment</h2>
+  <p>Discover exclusive watches & accessories with Fahmora Store</p>
+  <div class="grid">
+    <div class="card"><img src="watch1.jpg"><h3>Black Classic Watch</h3><p>Rs.4999</p></div>
+    <div class="card"><img src="watch2.jpg"><h3>Red Dial Chrono</h3><p>Rs.5999</p></div>
+    <div class="card"><img src="watch3.jpg"><h3>Luxury Gold Watch</h3><p>Rs.7999</p></div>
+  </div>
+  <button onclick="showPage('shop')">Explore Full Collection</button>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="page">
+  <h2>Our Categories</h2>
+  <div class="grid">
+    <div class="card"><img src="men.jpg"><h3>Men's Collection</h3>
+      <p>Watches, Chains, Bracelets, Rings, Perfumes</p>
+      <button class="back" onclick="showPage('men')">View</button></div>
+    <div class="card"><img src="women.jpg"><h3>Women's Collection</h3>
+      <p>Watches, Bracelets, Rings, Perfumes</p>
+      <button class="back" onclick="showPage('women')">View</button></div>
+    <div class="card"><img src="perfume-main.jpg"><h3>Perfume Collection</h3>
+      <p>Luxury fragrances for men & women</p>
+      <button class="back" onclick="showPage('perfume')">View</button></div>
+  </div>
+  <button class="back" onclick="showPage('home')">← Back</button>
+</section>
+
+<!-- MEN -->
+<section id="men" class="page">
+  <h2>Men's Accessories</h2>
+  <div class="grid">
+    <div class="card"><img src="watch-men.jpg"><h3>Men Watch</h3><p>Rs.4999</p></div>
+    <div class="card"><img src="bracelet-men.jpg"><h3>Leather Bracelet</h3><p>Rs.2499</p></div>
+    <div class="card"><img src="chain-men.jpg"><h3>Silver Chain</h3><p>Rs.3999</p></div>
+    <div class="card"><img src="ring-men.jpg"><h3>Royal Ring</h3><p>Rs.1999</p></div>
+    <div class="card"><img src="perfume-men.jpg"><h3>Men Perfume</h3><p>Rs.3499</p></div>
+  </div>
+  <button class="back" onclick="showPage('shop')">← Back</button>
+</section>
+
+<!-- WOMEN -->
+<section id="women" class="page">
+  <h2>Women's Accessories</h2>
+  <div class="grid">
+    <div class="card"><img src="watch-women.jpg"><h3>Diamond Watch</h3><p>Rs.5999</p></div>
+    <div class="card"><img src="bracelet-women.jpg"><h3>Gold Bracelet</h3><p>Rs.3499</p></div>
+    <div class="card"><img src="ring-women.jpg"><h3>Crystal Ring</h3><p>Rs.2299</p></div>
+    <div class="card"><img src="perfume-women.jpg"><h3>Rose Perfume</h3><p>Rs.3799</p></div>
+  </div>
+  <button class="back" onclick="showPage('shop')">← Back</button>
+</section>
+
+<!-- PERFUME -->
+<section id="perfume" class="page">
+  <h2>Perfume Collection</h2>
+  <p>Luxury scents that define your personality</p>
+  <div class="grid">
+    <div class="card"><img src="perfume-men.jpg"><h3>Fahmora Intense (Men)</h3><p>Rs.3499</p></div>
+    <div class="card"><img src="perfume-women.jpg"><h3>Fahmora Bloom (Women)</h3><p>Rs.3799</p></div>
+    <div class="card"><img src="perfume-black.jpg"><h3>Noir Edition</h3><p>Rs.4299</p></div>
+    <div class="card"><img src="perfume-red.jpg"><h3>Scarlet Passion</h3><p>Rs.3999</p></div>
+  </div>
+  <button class="back" onclick="showPage('shop')">← Back</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <h2>About Fahmora Store</h2>
+  <p style="max-width:800px;margin:auto;line-height:1.6em;">
+    Fahmora Store offers high-end watches, bracelets, chains, rings, and perfumes 
+    designed to match your luxury lifestyle. Our brand represents class, quality, 
+    and innovation. Each product at Fahmora is carefully crafted for those who value 
+    perfection and timeless design.
+  </p>
+  <button class="back" onclick="showPage('home')">← Back</button>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+  <h2>Contact Us</h2>
+  <p>📞 03147379489<br>📧 <a href="mailto:fahmorastore@gmail.com">fahmorastore@gmail.com</a><br>📍 Pakistan</p>
+  <form onsubmit="alert('Thank you! We will contact you soon.');return false;">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <button class="back" onclick="showPage('home')">← Back</button>
+</section>
+
+<footer>
+  <p>© 2025 Fahmora Store | fahmorastore@gmail.com | 03147379489</p>
+</footer>
+
+<script>
+  function showPage(id){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo(0,0);
+  }
+</script>
+</body>
+</html>
